@@ -1,8 +1,8 @@
 var count = 0;
+var alert_count = 0;
 
 function playGame() {
     var Name;
-    var Repeat;
 
     //기본 선물 환경에서 사람뽑기 화면으로 바뀐다.
     if (count == 0) {
@@ -41,7 +41,11 @@ function playGame() {
         var text = $("#log").text();
         var splitText = text.split(",");
         if (count < splitText.length) {
-            //한번 반복을 돌리면 다음부터는 자유롭게 돌린다.
+            //한번 반복을 돌리면 경고후 다음부터는 자유롭게 돌린다.
+            if (alert_count == 0) {
+                alert("한번 실행을 완료하였고 이제부터는 중복합니다.");
+                alert_count++;
+            }
             return 1;
         }
         for (var i = 0; i < splitText.length; i++) {
