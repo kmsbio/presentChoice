@@ -46,9 +46,8 @@ function playGame() {
             if (splitText[i] == "") {
                 alert("빈칸은 안됩니다.");
                 return 0;
-            } else {
-                return 1;
             }
+        return 1;
     }
 
     //선물은 한사람이 여러분 줄 수 없다 log 값을 인식하여 중복을 피한다.
