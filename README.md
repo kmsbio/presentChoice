@@ -3,8 +3,8 @@
 
 그냥 동아리 활동용으로 심심해서 만들어보았습니다.
 
-## 사용 CDN 및 링크
+## 사용 CDN 및 사진
 *CDN : JQuary, Bootstrap
 
 
-*IMG : Background, main theme 
+*IMG : Background, main theme (pixabay)
