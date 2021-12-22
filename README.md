@@ -6,5 +6,6 @@
 ## 사용 CDN 및 사진
 *CDN : JQuary, Bootstrap
 
-
 *IMG : Background, main theme (pixabay)
+
+<img src="./asset/santa-claus.png" width="200px">
