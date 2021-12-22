@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./function.js"></script>
+    <title>선물교환</title>
+</head>
+<body>
+    <div class="my-5 text-center">
+        <div id="board">
+            <img id="startIMG" class="d-block mx-auto" src="https://pixabay.com/get/gbd666d2dfbb9a8ea61a8e146fb5a40e45dc82984ab0b882d92fd5e7247697ef0dda48e25904ee8a4771b74058fc7e15f9edcda802410e5e5f5bfe83d55bc6bee16fcff56f465f426ee6e78d62cf32ba0_640.png" height="200px">
+        </div>
+        <h1 class="fw-bold" style="margin-top: 20px;">선물교환</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-2">한바퀴 반복으로 진행하고 그 다음 부터는 랜덤으로 진행합니다</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="playGame()">Play</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg" onclick="before()">before</button>
+          </div>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <textarea  id= "inputName" type="text" placeholder="이름(enter)로 구분합니다"></textarea>
+          </div>
+        </div>
+        <div id="log">
+            지금 까지 나온 인원 <br>
+        </div>
+      </div>
+</body>
+
+<style>
+    body {
+        background-image: url(https://pixabay.com/get/g6e11496dd09906f5a149bc380fc0c4412396b48f66a4c555d1a0faa26fcb2f6b602107c5c536c7e88bcbc50340d9f6e487b471a0440ce00aebaa42f038257bc1f262c7c48db4bdc14f2126ec900515c3_1920.jpg);
+    }
+
+    #inputName {
+        width: 20rem;
+        height: 5rem;
+        margin-top: 2%;
+    }
+
+    #winning {
+        display: inline-block;
+        width: 400px;
+        height: 200px;
+        border: 10px solid red;
+
+        background-color: whitesmoke;
+        opacity: 80%;
+
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 180px;
+    }
+
+    #log {
+        color: green;
+        font-weight: bold;
+    }
+
+</style>
+</html>
