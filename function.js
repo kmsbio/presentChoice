@@ -12,8 +12,11 @@ function playGame() {
         count++;
     }
 
-    Name = initName();
-    Game(Name);
+    if (validation()) {
+        Name = initName();
+        Game(Name);
+    }
+
     //textarea에서 입력후 enter 단위로 나누는 함수
     function initName() {
         var text = document.getElementById("inputName").value;
@@ -34,6 +37,18 @@ function playGame() {
                 break;
             }
         }
+    }
+
+    function validation() {
+        var text = document.getElementById("inputName").value;
+        var splitText = text.split("\n");
+        for (var i = 0; i <= splitText.length; i++)
+            if (splitText[i] == "") {
+                alert("빈칸은 안됩니다.");
+                return 0;
+            } else {
+                return 1;
+            }
     }
 
     //선물은 한사람이 여러분 줄 수 없다 log 값을 인식하여 중복을 피한다.
